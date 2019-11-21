@@ -15,6 +15,7 @@
 		0D5BA1342387000E0072A859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5BA1322387000E0072A859 /* LaunchScreen.storyboard */; };
 		0D5BA13F2387000F0072A859 /* MyTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BA13E2387000F0072A859 /* MyTextFieldTests.swift */; };
 		0D5BA14A2387000F0072A859 /* MyTextFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BA1492387000F0072A859 /* MyTextFieldUITests.swift */; };
+		A865F8DD96CD5D0F139B0BD2 /* Pods_MyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68AD7B20B0A837D0BFF656B /* Pods_MyTextField.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		0D5BA1452387000F0072A859 /* MyTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5BA1492387000F0072A859 /* MyTextFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldUITests.swift; sourceTree = "<group>"; };
 		0D5BA14B2387000F0072A859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC8D019646C608DFBBF94CE /* Pods-MyTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTextField/Pods-MyTextField.debug.xcconfig"; sourceTree = "<group>"; };
+		378343C7CE1607B104CE33CD /* Pods-MyTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTextField/Pods-MyTextField.release.xcconfig"; sourceTree = "<group>"; };
+		B68AD7B20B0A837D0BFF656B /* Pods_MyTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A865F8DD96CD5D0F139B0BD2 /* Pods_MyTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				0D5BA13D2387000F0072A859 /* MyTextFieldTests */,
 				0D5BA1482387000F0072A859 /* MyTextFieldUITests */,
 				0D5BA1252387000C0072A859 /* Products */,
+				1D5D5E7AD148D457325AFF6A /* Pods */,
+				372CB503C7DD0C75628D949F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,23 @@
 			path = MyTextFieldUITests;
 			sourceTree = "<group>";
 		};
+		1D5D5E7AD148D457325AFF6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FC8D019646C608DFBBF94CE /* Pods-MyTextField.debug.xcconfig */,
+				378343C7CE1607B104CE33CD /* Pods-MyTextField.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		372CB503C7DD0C75628D949F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68AD7B20B0A837D0BFF656B /* Pods_MyTextField.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D5BA14E2387000F0072A859 /* Build configuration list for PBXNativeTarget "MyTextField" */;
 			buildPhases = (
+				11EC7454286AFCB90915979C /* [CP] Check Pods Manifest.lock */,
 				0D5BA1202387000C0072A859 /* Sources */,
 				0D5BA1212387000C0072A859 /* Frameworks */,
 				0D5BA1222387000C0072A859 /* Resources */,
+				36A28D015396FAB55FEE3DC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +279,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11EC7454286AFCB90915979C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTextField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A28D015396FAB55FEE3DC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTextField/Pods-MyTextField-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTextField/Pods-MyTextField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D5BA1202387000C0072A859 /* Sources */ = {
@@ -432,6 +505,7 @@
 		};
 		0D5BA14F2387000F0072A859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC8D019646C608DFBBF94CE /* Pods-MyTextField.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +523,7 @@
 		};
 		0D5BA1502387000F0072A859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378343C7CE1607B104CE33CD /* Pods-MyTextField.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
