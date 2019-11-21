@@ -1,6 +1,6 @@
 //
-//  SkyFloatingLabelTextFieldUITests.swift
-//  SkyFloatingLabelTextFieldUITests
+//  MyTextFieldUITests.swift
+//  MyTextFieldUITests
 //
 //  Created by Gabriel Sanzone on 21/11/19.
 //  Copyright © 2019 Gabriel Chirico Mahtuk de Melo Sanzone. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SkyFloatingLabelTextFieldUITests: XCTestCase {
+class MyTextFieldUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  SkyFloatingLabelTextField
+//  MyTextField
 //
 //  Created by Gabriel Sanzone on 21/11/19.
 //  Copyright © 2019 Gabriel Chirico Mahtuk de Melo Sanzone. All rights reserved.
